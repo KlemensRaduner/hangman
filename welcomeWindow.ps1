@@ -5,18 +5,20 @@ $form = New-Object System.Windows.Forms.Form
 $form.Text = 'HangMan'
 $form.Size = New-Object System.Drawing.Size(320,220)
 $form.StartPosition = 'CenterScreen'
+$Icon                            = New-Object system.drawing.icon ('.\foti hangman\IMG_0360.ico')
+$Form.Icon                       = $Icon
 
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(20,120)
-$okButton.Size = New-Object System.Drawing.Size(150,23)
+$okButton.Location = New-Object System.Drawing.Point(20,110)
+$okButton.Size = New-Object System.Drawing.Size(150,30)
 $okButton.Text = 'Start Game'
 $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
 $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(190,120)
-$cancelButton.Size = New-Object System.Drawing.Size(90,23)
+$cancelButton.Location = New-Object System.Drawing.Point(190,110)
+$cancelButton.Size = New-Object System.Drawing.Size(90,30)
 $cancelButton.Text = 'Cancel'
 $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
 $form.CancelButton = $cancelButton
@@ -29,7 +31,7 @@ $label.Text = 'Please enter the word you want to start with:'
 $form.Controls.Add($label)
 
 $textBox = New-Object System.Windows.Forms.TextBox
-$textBox.Location = New-Object System.Drawing.Point(20,80)
+$textBox.Location = New-Object System.Drawing.Point(20,70)
 $textBox.Size = New-Object System.Drawing.Size(260,20)
 $form.Controls.Add($textBox)
 
